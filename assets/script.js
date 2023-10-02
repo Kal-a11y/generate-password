@@ -18,7 +18,16 @@ let letters = alphabet.split("");
 let uppercaseLetters = letters.map(letter => letter.toUpperCase());
 
 let getNum = function(){
+  num = window.prompt("Choose password length. (min: 8 max: 128)");
+  num = Number(num);
+console.log(num);
 
+  if (num >= 8 && num <= 128){
+    return num;
+  }else{
+    window.alert("Invalid input")
+    return getNum();
+  }
 }
 
 let getPasswordCriteria = function(){
@@ -30,7 +39,8 @@ let checkPasswordLength = function(){
 }
 
 let generatePassword = function(){
-  
+  passwordLength = getNum();
+  console.log("Final product",passwordLength);
 }
 
 writePassword();

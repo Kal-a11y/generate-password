@@ -11,6 +11,29 @@
 
   //have the generated password display on the page
 
+let criteriaUsed = [];
+let passwordLength = 0;
+let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+let letters = alphabet.split("");
+let uppercaseLetters = letters.map(letter => letter.toUpperCase());
+
+let getNum = function(){
+
+}
+
+let getPasswordCriteria = function(){
+  
+}
+
+let checkPasswordLength = function(){
+
+}
+
+let generatePassword = function(){
+  
+}
+
+writePassword();
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 

@@ -74,6 +74,9 @@ let generatePassword = function(){
     password = password.concat(currentCharacter);
   }
 
+  criteriaUsed = [];
+  passwordLength = 0;
+
   return password;
 }
 

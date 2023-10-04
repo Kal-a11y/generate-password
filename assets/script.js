@@ -11,8 +11,6 @@
 
   //have the generated password display on the page
 
-let criteriaUsed = [];
-let passwordLength = 0;
 let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let letters = alphabet.split("");
 let uppercaseLetters = letters.map(letter => letter.toUpperCase());
@@ -55,6 +53,9 @@ let checkPasswordLength = function(){
 }
 
 let generatePassword = function(){
+  let criteriaUsed = [];
+  let passwordLength = 0;
+  
   password = "";
   passwordLength = getNum();
   getPasswordCriteria();

@@ -51,6 +51,10 @@ let getPasswordCriteria = function(){
     criteriaUsed.push(specialCharacters);
   }
 
+  if (criteriaUsed.length === 0){
+    window.alert("You must choose at least 1 criteria.");
+    getPasswordCriteria();
+  }
   
 }
 

@@ -52,6 +52,11 @@ let getPasswordCriteria = function(){
     criteriaUsed.push(specialCharacters);
   }
 
+  let numbersAC = window.confirm('Would you like numeric characters in your password?');
+  if (numbersAC){
+    criteriaUsed.push(numbers);
+  }
+
   if (criteriaUsed.length === 0){
     window.alert("You must choose at least 1 criteria.");
     getPasswordCriteria();

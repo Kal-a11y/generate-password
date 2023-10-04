@@ -11,6 +11,7 @@
 
   //have the generated password display on the page
 
+//Base Variables
 let criteriaUsed = [];
 let passwordLength = 0;
 let alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -19,6 +20,8 @@ let uppercaseLetters = letters.map(letter => letter.toUpperCase());
 let specialCharacters = "/[!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]+/";
 specialCharacters = specialCharacters.split("");
 
+
+//Get password length number
 let getNum = function(){
   num = window.prompt("Choose password length. (min: 8 max: 128)");
   num = Number(num);
@@ -31,6 +34,7 @@ let getNum = function(){
   }
 }
 
+//Set criteria to be used
 let getPasswordCriteria = function(){
   lowercaseLetterAC = window.confirm('Would you like lowercase letters in your password?');
   if (lowercaseLetterAC){
@@ -54,15 +58,18 @@ let checkPasswordLength = function(){
 
 }
 
+//Create password form length and criteria
 let generatePassword = function(){
   password = "";
   passwordLength = getNum();
   getPasswordCriteria();
 
+  //Create each password character
   for (let count = 0; count < passwordLength; count++){
     let index = Math.floor(Math.random() * criteriaUsed.length);
     let currentCharacter = criteriaUsed[index];
 
+    //Get nested array item 
     if (currentCharacter === specialCharacters){
       currentCharacter = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
     }else if (currentCharacter === letters){
@@ -73,6 +80,7 @@ let generatePassword = function(){
     password = password.concat(currentCharacter);
   }
 
+  //Reset password for reuse
   criteriaUsed = [];
   passwordLength = 0;
 

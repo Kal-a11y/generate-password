@@ -16,6 +16,8 @@ let passwordLength = 0;
 let alphabet = 'abcdefghijklmnopqrstuvwxyz';
 let letters = alphabet.split("");
 let uppercaseLetters = letters.map(letter => letter.toUpperCase());
+let specialCharacters = "/[!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]+/";
+specialCharacters = specialCharacters.split("");
 
 let getNum = function(){
   num = window.prompt("Choose password length. (min: 8 max: 128)");

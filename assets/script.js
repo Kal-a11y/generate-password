@@ -58,7 +58,6 @@ let generatePassword = function(){
   password = "";
   passwordLength = getNum();
   getPasswordCriteria();
-  console.log("Final product",criteriaUsed);
 
   for (let count = 0; count < passwordLength; count++){
     let index = Math.floor(Math.random() * criteriaUsed.length);

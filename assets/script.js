@@ -36,17 +36,17 @@ let getNum = function(){
 
 //Set criteria to be used
 let getPasswordCriteria = function(){
-  lowercaseLetterAC = window.confirm('Would you like lowercase letters in your password?');
+  let lowercaseLetterAC = window.confirm('Would you like lowercase letters in your password?');
   if (lowercaseLetterAC){
     criteriaUsed.push(letters);
   }
 
-  uppercaseLetterAC = window.confirm('Would you like uppercase letters in your password?');
+  let uppercaseLetterAC = window.confirm('Would you like uppercase letters in your password?');
   if (uppercaseLetterAC){
     criteriaUsed.push(uppercaseLetters);
   }
 
-  specialCharacterAC = window.confirm('Would you like special characters in your password?');
+  let specialCharacterAC = window.confirm('Would you like special characters in your password?');
   if (specialCharacterAC){
     criteriaUsed.push(specialCharacters);
   }

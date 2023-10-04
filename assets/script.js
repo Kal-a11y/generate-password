@@ -42,7 +42,7 @@ let generatePassword = function(){
   console.log("Final product",passwordLength);
 }
 
-writePassword();
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 

@@ -55,9 +55,26 @@ let checkPasswordLength = function(){
 }
 
 let generatePassword = function(){
+  password = "";
   passwordLength = getNum();
   getPasswordCriteria();
   console.log("Final product",criteriaUsed);
+
+  for (let count = 0; count < passwordLength; count++){
+    let index = Math.floor(Math.random() * criteriaUsed.length);
+    let currentCharacter = criteriaUsed[index];
+
+    if (currentCharacter === specialCharacters){
+      currentCharacter = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+    }else if (currentCharacter === letters){
+      currentCharacter = letters[Math.floor(Math.random() * letters.length)];
+    }else{
+      currentCharacter = uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)];
+    }
+    password = password.concat(currentCharacter);
+  }
+
+  return password;
 }
 
 

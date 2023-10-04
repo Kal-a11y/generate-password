@@ -81,8 +81,10 @@ let generatePassword = function(){
       currentCharacter = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
     }else if (currentCharacter === letters){
       currentCharacter = letters[Math.floor(Math.random() * letters.length)];
-    }else{
+    }else if (currentCharacter === uppercaseLetters){
       currentCharacter = uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)];
+    }else{
+      currentCharacter = numbers[Math.floor(Math.random() * numbers.length)];
     }
     password = password.concat(currentCharacter);
   }

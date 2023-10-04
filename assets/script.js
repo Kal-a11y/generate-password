@@ -54,10 +54,6 @@ let getPasswordCriteria = function(){
   
 }
 
-let checkPasswordLength = function(){
-
-}
-
 //Create password form length and criteria
 let generatePassword = function(){
   password = "";

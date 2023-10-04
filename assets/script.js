@@ -32,6 +32,21 @@ let getNum = function(){
 }
 
 let getPasswordCriteria = function(){
+  lowercaseLetterAC = window.confirm('Would you like lowercase letters in your password?');
+  if (lowercaseLetterAC){
+    criteriaUsed.push(letters);
+  }
+
+  uppercaseLetterAC = window.confirm('Would you like uppercase letters in your password?');
+  if (uppercaseLetterAC){
+    criteriaUsed.push(uppercaseLetters);
+  }
+
+  specialCharacterAC = window.confirm('Would you like special characters in your password?');
+  if (specialCharacterAC){
+    criteriaUsed.push(specialCharacters);
+  }
+
   
 }
 
@@ -41,7 +56,8 @@ let checkPasswordLength = function(){
 
 let generatePassword = function(){
   passwordLength = getNum();
-  console.log("Final product",passwordLength);
+  getPasswordCriteria();
+  console.log("Final product",criteriaUsed);
 }
 
 

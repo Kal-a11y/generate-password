@@ -20,6 +20,7 @@ let uppercaseLetters = letters.map(letter => letter.toUpperCase());
 let specialCharacters = "/[!@#$%^&*()_+\-=\[\]{};':\\|,.<>\/?]+/";
 specialCharacters = specialCharacters.split("");
 let numbers = '0123456789';
+numbers = numbers.split("");
 
 
 //Get password length number

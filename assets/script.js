@@ -20,7 +20,6 @@ let uppercaseLetters = letters.map(letter => letter.toUpperCase());
 let getNum = function(){
   num = window.prompt("Choose password length. (min: 8 max: 128)");
   num = Number(num);
-console.log(num);
 
   if (num >= 8 && num <= 128){
     return num;
